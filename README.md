@@ -1,22 +1,14 @@
-# Network Interface Hardware in VHDL
+## 🎓 Contesto Accademico
 
+Questo progetto è stato sviluppato nell'ambito del corso di **Computer Architecture** (Corso di Laurea in Ingegneria) presso l'**Università degli Studi di Roma "La Sapienza"**.
+
+* **Autore:** Margherita Rossi
+* **Supervisione / Laboratorio:** Laboratori APE - Sapienza Università di Roma
+* **Anno Accademico:** 2025/2026
+ 
+# Network Interface Hardware in VHDL
 Questo repository contiene l'implementazione e la simulazione in VHDL di un'interfaccia di rete hardware (Network Interface) dedicata alla manipolazione, serializzazione, deserializzazione e routing di flussi di dati strutturati a pacchetti su parole a 32-bit (word). Il progetto include la validazione tramite testbench dedicati e l'implementazione fisica su FPGA Xilinx.
 
----
-
-## 📌 Indice
-- [Descrizione del Progetto](#descrizione-del-progetto)
-- [Architettura del Sistema](#architettura-del-sistema)
-  - [Struttura del Pacchetto](#struttura-del-pacchetto)
-  - [Blocco di Trasmissione (TX Block)](#blocco-di-trasmissione-tx-block)
-  - [Blocco di Ricezione (RX Block)](#blocco-di-ricezione-rx-block)
-  - [Top Level](#top-level)
-- [Implementazione Hardware su FPGA](#implementazione-hardware-su-fpga)
-- [Struttura del Repository](#struttura-del-repository)
-- [Sviluppi Futuri](#sviluppi-futuri)
-- [Autore e Contesto](#autore-e-contesto)
-
----
 
 ## 📖 Descrizione del Progetto
 
