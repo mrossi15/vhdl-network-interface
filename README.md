@@ -84,7 +84,6 @@ L'implementazione fisica è stata eseguita nell'ambiente di sviluppo **Xilinx Vi
 .
 ├── src/                    # Codici sorgente VHDL (FSM1, FSM2, FSM3, Top Level, Pkg)
 ├── tb/                     # TestBench per simulazione e Packet Checker
-├── fpga/                   # File di vincolo (.xdc) e IP Core Vivado
 ├── docs/                   # Documentazione di progetto
 ├── .gitignore              # Filtro per file temporanei Vivado/GHDL
 └── README.md               # Documentazione principale del repository
