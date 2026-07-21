@@ -1,6 +1,6 @@
 ## 🎓 Contesto Accademico
 
-Questo progetto è stato sviluppato nell'ambito del corso di **Computer Architecture** (Corso di Laurea in Ingegneria) presso l'**Università degli Studi di Roma "La Sapienza"**.
+Questo progetto è stato sviluppato nell'ambito del corso di **Computer Architecture** (Corso di Laurea in Fisica Magistrale) presso l'**Università degli Studi di Roma "La Sapienza"**.
 
 * **Autore:** Margherita Rossi
 * **Supervisione / Laboratorio:** Laboratori APE - Sapienza Università di Roma
