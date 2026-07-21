@@ -35,7 +35,7 @@ architecture Behavior of tb_rx_tx is
 
 begin
 
-    -- 1. GENERAZIONE DEL CLOCK
+    -- GENERAZIONE DEL CLOCK
     clk_process : process
     begin
         clk <= '0';
@@ -45,7 +45,7 @@ begin
     end process;
 
 
-    -- 2. ISTANZA DEL PACKET GENERATOR 
+    -- ISTANZA DEL PACKET GENERATOR 
     U_PACKET_GEN: entity work.packet_generator
         port map (
             clk      => clk,
@@ -56,7 +56,7 @@ begin
         );
 
 
-    -- 3. ISTANZA DEL RICEVITORE (
+    -- ISTANZA DEL RICEVITORE (
     U_TX_BLOCK: entity work.tx_block
         port map (
             clk       => clk,
@@ -69,7 +69,7 @@ begin
         );
 
 
-    -- 4. ISTANZA DEL TRASMETTITORE 
+    --ISTANZA DEL TRASMETTITORE 
     U_RX_BLOCK: entity work.rx_block
         generic map (
             g_width => c_data_width,
