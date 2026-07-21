@@ -1,69 +1,47 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
+# ==========================================
+# Xilinx Vivado Temporary & Output Files
+# ==========================================
 *.log
-*.bak
-*.swp
+*.jou
+*.str
+*.dir/
+.Xil/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+*.cache/
+*.gen/
+clockInfo.txt
+hd_visual/
+usage_statistics_webtalk.html
+usage_statistics_webtalk.xml
+vivado_*.backup.jou
+vivado_*.backup.log
 
-# vcpkg
-vcpkg_installed/
+# Bitstream outputs (scommenta se NON vuoi caricare i file .bit su Git)
+# *.bit
+# *.bin
 
-# debug information files
-*.dwo
+# ==========================================
+# Simulator Files (GHDL / ModelSim / Riviera)
+# ==========================================
+*.cf
+*.o
+*.vcd
+*.ghw
+work-obj93.cf
+work-obj08.cf
 
-# test output & cache
-Testing/
-.cache/
+# ModelSim / QuestaSim
+work/
+transcript
+vsim.wlf
+
+# ==========================================
+# OS & IDE Specific Files
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
