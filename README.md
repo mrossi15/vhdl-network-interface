@@ -1,6 +1,6 @@
-## 🎓 Contesto Accademico
+## Contesto Accademico
 
-Questo progetto è stato sviluppato nell'ambito del corso di **Computer Architecture** (Corso di Laurea in Fisica Magistrale) presso l'**Università degli Studi di Roma "La Sapienza"**.
+Questo progetto è stato sviluppato nell'ambito del corso di **Computer Architecture for Physics** (Corso di Laurea in Fisica Magistrale) presso l'**Università degli Studi di Roma "La Sapienza"**.
 
 * **Autore:** Margherita Rossi
 * **Supervisione / Laboratorio:** Laboratori APE - Sapienza Università di Roma
@@ -10,7 +10,7 @@ Questo progetto è stato sviluppato nell'ambito del corso di **Computer Architec
 Questo repository contiene l'implementazione e la simulazione in VHDL di un'interfaccia di rete hardware (Network Interface) dedicata alla manipolazione, serializzazione, deserializzazione e routing di flussi di dati strutturati a pacchetti su parole a 32-bit (word). Il progetto include la validazione tramite testbench dedicati e l'implementazione fisica su FPGA Xilinx.
 
 
-## 📖 Descrizione del Progetto
+## Descrizione del Progetto
 
 L'obiettivo principale del progetto è realizzare un'interfaccia di rete in grado di gestire l'intero ciclo di vita di un pacchetto dati:
 1. **Immagazzinamento locale:** Ricezione dei dati da un generatore e scrittura in un buffer FIFO locale per gestire differenze di clock e disponibilità del canale.
@@ -21,16 +21,16 @@ La validazione dell'architettura è stata condotta seguendo un approccio increme
 
 ---
 
-## 🏗️ Architettura del Sistema
+## Architettura del Sistema
 
-### 📦 Struttura del Pacchetto
+### Struttura del Pacchetto
 I dati trasmessi sono organizzati in pacchetti composti da due sezioni principali:
 * **Header (32 bit):** Contiene le informazioni di controllo necessarie alla gestione del pacchetto, tra cui la lunghezza del messaggio e i campi di indirizzamento della destinazione. Le posizioni di questi campi sono specificate nel file `performance_type_pkg`.
 * **Payload:** Rappresenta il contenuto informativo effettivo composto da parole a 32-bit.
 
 ---
 
-### 📤 Blocco di Trasmissione (TX Block)
+### Blocco di Trasmissione (TX Block)
 Il blocco di trasmissione si compone dei seguenti moduli:
 * **Packet Generator:** Inizializza i dati secondo `performance_type_pkg` e interagisce con il sistema tramite un protocollo di handshake sincrono basato sui segnali `dt_valid` e `dt_ready`.
 * **FSM1 (Immagazzinamento e Handshake):**
@@ -46,7 +46,7 @@ Il blocco di trasmissione si compone dei seguenti moduli:
 
 ---
 
-### 📥 Blocco di Ricezione (RX Block)
+### Blocco di Ricezione (RX Block)
 Il blocco di ricezione si occupa della ricostruzione dei dati seriali:
 * **FSM3 (Deserializzazione e Routing):**
   * Progettata per l'acquisizione continua dei dati senza segnale di controllo di flusso (ready) verso FSM2.
@@ -55,12 +55,12 @@ Il blocco di ricezione si occupa della ricostruzione dei dati seriali:
 * **FIFO di Destinazione:** Due memorie FIFO che immagazzinano i pacchetti ricostruiti in parallelo in base all'indirizzamento
 ---
 
-### 🔝 Top Level
-Il modulo `TOP` connette l'intera catena di elaborazione (Packet Generator → TX Block → RX Block)[cite: 1]. Il sistema include due istanze del modulo **Packet Checker**, che verificano la corrispondenza dei dati ricevuti rispetto a quelli generati fornendo un esito positivo tramite i segnali `test_ok_1` e `test_ok_2`
+### Top Level
+Il modulo `TOP` connette l'intera catena di elaborazione (Packet Generator → TX Block → RX Block). Il sistema include due istanze del modulo **Packet Checker**, che verificano la corrispondenza dei dati ricevuti rispetto a quelli generati fornendo un esito positivo tramite i segnali `test_ok_1` e `test_ok_2`
 
 ---
 
-## ⚙️ Implementazione Hardware su FPGA
+## Implementazione Hardware su FPGA
 
 L'implementazione fisica è stata eseguita nell'ambiente di sviluppo **Xilinx Vivado** presso i laboratori APE dell'Università Sapienza:
 * **IP Core utilizzate:** Generatore di memoria FIFO e **Clocking Wizard** per la gestione di domini di clock asincroni.
